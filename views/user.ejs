@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <% users.forEach( el => { %>
+                <li class='userItem' data-id='<%=el._id%>'>
+                </li>
+        <% }) %>    
+    </ul>
+    
+
+    <form action="/todos/createTodo" method='POST'>
+        <input type="text" placeholder="useNAME" name='userName'>
+        <input type="submit">
+    </form>
+
+    <a href="/logout">Logout</a>
+</body>
+</html>
